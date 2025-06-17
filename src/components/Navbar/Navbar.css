@@ -1,0 +1,28 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.logo {
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: end;
+}
+
+.signInBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 55px;
+    padding-bottom: 12px;
+    height: 40px;
+}
+
+.signInBtn:hover,
+.signInBtn:active {
+    background-color: #84af69;
+}
