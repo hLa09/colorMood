@@ -20,24 +20,21 @@ Overall, this project wasn’t just about building something functional—it was
 ## Display in various screen size
 Mobile - SE
     - Before search
-    <img src="src/assets/SE_screen_size_display.png">
-    -
+    - <img src="src/assets/SE_screen_size_display.png">
     - After search
-    <img src="src/assets/result_with_SE_mobile.png">
+    - <img src="src/assets/result_with_SE_mobile.png">
 
 Ipad - Mini
     - Before search
-    <img src="src/assets/Ipad_screen_size_display.png">
-    -
+    - <img src="src/assets/Ipad_screen_size_display.png">
     - After search
-    <img src="src/assets/result_with_ipad_size.png">
+    - <img src="src/assets/result_with_ipad_size.png">
 
 Laptop - Surface
     - Before search
-    <img src="src/assets/laptop_screen_size_display.png">
-    -
+    - <img src="src/assets/laptop_screen_size_display.png">
     - After search
-    <img src="src/assets/result_with_laptop_size.png">
+    - <img src="src/assets/result_with_laptop_size.png">
 
 
 # React + Vite
