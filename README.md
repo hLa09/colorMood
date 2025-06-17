@@ -17,6 +17,24 @@ This experience also connected strongly with course concepts like state manageme
 
 Overall, this project wasn’t just about building something functional—it was about learning to navigate the challenges of real-world development. It reminded me that building apps isn’t always linear, and that adapting to problems is part of what makes someone a strong developer. I'm walking away with more confidence, a deeper understanding of frontend architecture, and a more thoughtful approach to coding.
 
+## Display in various screen size
+Mobile - SE
+    - Before search
+    <img src="src/assets/SE_screen_size_display.png">
+    - After search
+    <img src="src/assets/result_with_SE_mobile.png">
+
+Ipad - Mini
+    - Before search
+    <img src="src/assets/Ipad_screen_size_display.png">
+    - After search
+    <img src="src/assets/result_with_ipad_size.png">
+
+Laptop - Surface
+    - Before search
+    <img src="src/assets/laptop_screen_size_display.png">
+    - After search
+    <img src="src/assets/result_with_laptop_size.png">
 
 
 # React + Vite
