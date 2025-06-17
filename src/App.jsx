@@ -10,7 +10,6 @@ import { fetchPalettes } from "./utils/fetchPalettes";
 import './App.css'
 
 function App() {
-  const [colors, setColors] = useState([]);
   const [palette, setPalette] = useState(null);
   const [savePalette, setSavePalette] = useState([]);
 
