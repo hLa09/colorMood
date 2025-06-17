@@ -4,15 +4,17 @@ import { updatePalette } from "../../utils/updatePalette";
 import { deletePalette } from "../../utils/deletePalette";
 
 const PaletteDisplay = ({ palette }) => {
-  if (!palette || !Array.isArray(palette.colors) || palette.colors.length === 0) {
-    return <p>Oops! No colors generated. Try a different mood description.</p>;
-  }
+  const [mood, setMood] = useState(palette.mood || "");
+  const [description, setDescription] = useState(palette.description || "");
+  const [editing, setEditing] = useState(false);
+  const [copyMessage, setCopyMessage] = useState("");
 
-  const handleEdit = () => {
-    const newMood = prompt("Enter new mood:", palette.mood || "");
-    const newDescription = prompt("Enter new description:", palette.description || "");
-    if (newMood && newDescription) {
-      updatePalette(palette.id, { mood: newMood, description: newDescription });
+  const handleEdit = () => setEditing(true);
+  
+  const handleSave = () => {
+    if (mood && description) {
+      updatePalette(palette.id, { mood, description });
+      setEditing(false); // Exit edit mode after saving
     }
   };
 
@@ -24,7 +26,8 @@ const PaletteDisplay = ({ palette }) => {
 
   const handleCopy = (color) => {
     navigator.clipboard.writeText(color);
-    alert(`Copied ${color} to clipboard!`);
+    setCopyMessage(`Copied ${color} to clipboard!`);
+    setTimeout(() => setCopyMessage(""), 2000); // Clear message after 2s
   };
 
   return (
@@ -42,9 +45,31 @@ const PaletteDisplay = ({ palette }) => {
         ))}
       </div>
 
+      {copyMessage && <p className="copyMessage">{copyMessage}</p>}
+
       <div className="customFeature">
-        <button className="edit" onClick={handleEdit}>Edit</button>
-        <button className="delete" onClick={handleDelete}>Delete</button>
+        {editing ? (
+          <>
+            <input
+              type="text"
+              value={mood}
+              onChange={(e) => setMood(e.target.value)}
+              placeholder="Update Mood"
+            />
+            <input
+              type="text"
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
+              placeholder="Update Description"
+            />
+            <button className="save" onClick={handleSave}>Save</button>
+          </>
+        ) : (
+          <>
+            <button className="edit" onClick={handleEdit}>Edit</button>
+            <button className="delete" onClick={handleDelete}>Delete</button>
+          </>
+        )}
       </div>
     </>
   );
