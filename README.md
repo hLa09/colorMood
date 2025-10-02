@@ -1,7 +1,7 @@
 
 ## Reflection on the Progress
-F2/ and F3:
-## Sources:
+F2 and F3:
+### Sources:
 ColorMind: http://colormind.io/api-access/ 
 React dev: https://react.dev/learn/react-developer-tools
 Firebase/Firestore: https://firebase.google.com/docs/firestore
